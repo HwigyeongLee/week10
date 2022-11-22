@@ -363,6 +363,7 @@
 
         	var timer = setTimeout(ddd,5000);
         	var t = 0
+        	var timer2 = setTimeout(eee,1000);
 			
 			const TimeGoesBack = setInterval (()=> {
 			t++;
@@ -379,10 +380,10 @@
 		 	clearInterval(TimeGoesBack);
 		 	}
         	
+        	function eee(){
         	window.location.href = "https://hwigyeonglee.github.io/week10_1/?q="+data[0]
 				+"#gsc.tab=0&gsc.q="+data[0] + "&gsc.page=1";
-
-			
+				}
         }
 
 
