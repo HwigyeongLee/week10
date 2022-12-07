@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=DotGothic16&family=Faster+One&family=Libre+Barcode+39&family=Michroma&family=Noto+Sans+KR&family=Orbitron:wght@400;900&family=Press+Start+2P&family=Wallpoet&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css">
+	<title></title>
+	<style type="text/css">
+		body{background: black;
+		font-family: 'Galmuri11';
+		padding:0;
+		margin:0;}
+		
+		#returnbutton{height:15vh;
+				font-size:35px ;
+				font-family: 'Galmuri11';
+				font-weight: 700;
+				color: black;
+				padding-left: calc(15vw + 10px);
+				line-height:240px;}
+		#presentTime{height:15vh;
+				font-size:27.5px ;
+				font-family: 'Galmuri11';
+				font-weight: 400;
+				color: black;
+				line-height:240px;
+		}
+		#container{background: greenyellow;
+			width: 100vw;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			}
+		#secondContainer{height: 80vh;
+			background: greenyellow;
+			display: flex;}
+		#left{width: 15vw;
+			background: greenyellow;}
+		#right{width: 15vw;
+			background: greenyellow;}
+		#thirdContainer{width: calc(100% - 30vw);
+			background: black;
+			border-radius:30px;
+			overflow: hidden;
+		}
+		.gcse-searchresults-only{height:calc(80vh-20px);}
+	</style>
+</head>
+<body>
+	
+
+	<div id="container">
+		<div id="returnbutton">X<span id="presentTime"></span></div>
+    	<div id="secondContainer">
+    		<div id="left"></div>
+		<div id="thirdContainer">
+			<br>
+			<div class="gcse-searchresults-only" data-defaultToImageSearch="true" data-image_size="medium"></div>
+		</div>
+    		<div id="right"></div>
+    	</div>
+    </div>
+<script async src="https://cse.google.com/cse.js?cx=f3768b69018944c92">
+</script>
+	<script type="text/javascript">
+	returnbutton.onclick = function(){
+		window.location.href="https://hwigyeonglee.github.io/week10/";
+	}
+		
+	let a = window.location.href;
+	console.log(a);
+		
+	let b = a.split("&");
+	console.log(b);
+	
+	let c = b[3];  //year
+	let d = b[4];  //month
+
+	let e = c.split("=")[1];
+	let f = d.split("=")[1];
+
+	document.getElementById("presentTime").innerHTML = " " + e +"년 "+ f +"월의 인기가요";
+	var link = window.location.href;
+	console.log(link);
+		
+	</script>
+
+</body>
+</html>
